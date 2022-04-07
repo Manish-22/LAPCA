@@ -1,0 +1,266 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    ADD_ASSIGN
+    AMP
+    AND_ASSIGN
+    AND_OP
+    AUTO
+    BREAK
+    CARET
+    CASE
+    CHARACTER
+    COLON
+    COMMA
+    CONST
+    CONSTANT
+    CONTINUE
+    DEC_OP
+    DEFAULT
+    DIV_ASSIGN
+    DO
+    DOT
+    ELLIPSIS
+    ELSE
+    ENUM
+    EQUAL
+    EQ_OP
+    EXCLAIM
+    EXTERN
+    FOR
+    GE_OP
+    GOTO
+    GREATER
+    IDENTIFIER
+    IF
+    INC_OP
+    LEFT_ASSIGN
+    LEFT_OP
+    LESS
+    LE_OP
+    LONG
+    L_BRACE
+    L_PAREN
+    L_SQUARE
+    MINUS
+    MOD_ASSIGN
+    MUL_ASSIGN
+    NE_OP
+    OR_ASSIGN
+    OR_OP
+    PERCENT
+    PIPE
+    PLUS
+    PTR_OP
+    QUEST
+    REGISTER
+    RETURN
+    RIGHT_ASSIGN
+    RIGHT_OP
+    R_BRACE
+    R_PAREN
+    R_SQUARE
+    SEMI
+    SHORT
+    SIGNED
+    SIZEOF
+    SLASH
+    STAR
+    STATIC
+    STRING_LITERAL
+    STRUCT
+    SUB_ASSIGN
+    SWITCH
+    TILDA
+    TYPEDEF
+    UNION
+    UNSIGNED
+    USER_DEFINED_TYPE
+    VOID
+    VOLATILE
+    WHILE
+    XOR_ASSIGN
+
+Grammar
+
+Rule 0     S' -> ST
+Rule 1     ST -> S
+Rule 2     S -> TYPE
+Rule 3     TYPE -> INT
+Rule 4     TYPE -> FLOAT
+Rule 5     TYPE -> CHAR
+Rule 6     TYPE -> BOOL
+Rule 7     TYPE -> DOUBLE
+
+Terminals, with rules where they appear
+
+ADD_ASSIGN           : 
+AMP                  : 
+AND_ASSIGN           : 
+AND_OP               : 
+AUTO                 : 
+BOOL                 : 6
+BREAK                : 
+CARET                : 
+CASE                 : 
+CHAR                 : 5
+CHARACTER            : 
+COLON                : 
+COMMA                : 
+CONST                : 
+CONSTANT             : 
+CONTINUE             : 
+DEC_OP               : 
+DEFAULT              : 
+DIV_ASSIGN           : 
+DO                   : 
+DOT                  : 
+DOUBLE               : 7
+ELLIPSIS             : 
+ELSE                 : 
+ENUM                 : 
+EQUAL                : 
+EQ_OP                : 
+EXCLAIM              : 
+EXTERN               : 
+FLOAT                : 4
+FOR                  : 
+GE_OP                : 
+GOTO                 : 
+GREATER              : 
+IDENTIFIER           : 
+IF                   : 
+INC_OP               : 
+INT                  : 3
+LEFT_ASSIGN          : 
+LEFT_OP              : 
+LESS                 : 
+LE_OP                : 
+LONG                 : 
+L_BRACE              : 
+L_PAREN              : 
+L_SQUARE             : 
+MINUS                : 
+MOD_ASSIGN           : 
+MUL_ASSIGN           : 
+NE_OP                : 
+OR_ASSIGN            : 
+OR_OP                : 
+PERCENT              : 
+PIPE                 : 
+PLUS                 : 
+PTR_OP               : 
+QUEST                : 
+REGISTER             : 
+RETURN               : 
+RIGHT_ASSIGN         : 
+RIGHT_OP             : 
+R_BRACE              : 
+R_PAREN              : 
+R_SQUARE             : 
+SEMI                 : 
+SHORT                : 
+SIGNED               : 
+SIZEOF               : 
+SLASH                : 
+STAR                 : 
+STATIC               : 
+STRING_LITERAL       : 
+STRUCT               : 
+SUB_ASSIGN           : 
+SWITCH               : 
+TILDA                : 
+TYPEDEF              : 
+UNION                : 
+UNSIGNED             : 
+USER_DEFINED_TYPE    : 
+VOID                 : 
+VOLATILE             : 
+WHILE                : 
+XOR_ASSIGN           : 
+error                : 
+
+Nonterminals, with rules where they appear
+
+S                    : 1
+ST                   : 0
+TYPE                 : 2
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . ST
+    (1) ST -> . S
+    (2) S -> . TYPE
+    (3) TYPE -> . INT
+    (4) TYPE -> . FLOAT
+    (5) TYPE -> . CHAR
+    (6) TYPE -> . BOOL
+    (7) TYPE -> . DOUBLE
+
+    INT             shift and go to state 4
+    FLOAT           shift and go to state 5
+    CHAR            shift and go to state 6
+    BOOL            shift and go to state 7
+    DOUBLE          shift and go to state 8
+
+    ST                             shift and go to state 1
+    S                              shift and go to state 2
+    TYPE                           shift and go to state 3
+
+state 1
+
+    (0) S' -> ST .
+
+
+
+state 2
+
+    (1) ST -> S .
+
+    $end            reduce using rule 1 (ST -> S .)
+
+
+state 3
+
+    (2) S -> TYPE .
+
+    $end            reduce using rule 2 (S -> TYPE .)
+
+
+state 4
+
+    (3) TYPE -> INT .
+
+    $end            reduce using rule 3 (TYPE -> INT .)
+
+
+state 5
+
+    (4) TYPE -> FLOAT .
+
+    $end            reduce using rule 4 (TYPE -> FLOAT .)
+
+
+state 6
+
+    (5) TYPE -> CHAR .
+
+    $end            reduce using rule 5 (TYPE -> CHAR .)
+
+
+state 7
+
+    (6) TYPE -> BOOL .
+
+    $end            reduce using rule 6 (TYPE -> BOOL .)
+
+
+state 8
+
+    (7) TYPE -> DOUBLE .
+
+    $end            reduce using rule 7 (TYPE -> DOUBLE .)
+

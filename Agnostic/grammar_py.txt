@@ -1,0 +1,2 @@
+A -> var = X
+X -> X | INT | FLOAT | STRING

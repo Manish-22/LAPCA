@@ -1,0 +1,12 @@
+ST : S 
+  ;
+S : TYPE 
+  ;
+
+TYPE : INT | FLOAT | CHAR | BOOL | DOUBLE  ;
+
+
+      
+
+
+s : error;
