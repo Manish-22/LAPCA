@@ -1,0 +1,5 @@
+STATE variable_declaration1
+    if len(NAME)>31:
+        print(LINE)
+        print("Variable has length more than 31")
+END_STATE
